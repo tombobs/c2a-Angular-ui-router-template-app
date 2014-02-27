@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html id="ng-app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html id="ng-app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html id="ng-app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html id="ng-app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="pageTitle"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <base></base>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- compiled CSS --><% styles.forEach(function (file) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/assets/json3.min.js"></script>
+    <script type="text/javascript" src="/assets/es5-shim.min.js"></script>
+    <script type="text/javascript" src="/assets/respond.min.js"></script>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+        document.createElement('messages');
+    </script>
+    <![endif]-->
+
+    <!-- compiled JavaScript --><% scripts.forEach(function (file) { %>
+    <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
+    <script type="text/javascript">
+        angular.element(document).ready(function () {
+            angular.bootstrap(document, ['boilerplate']);
+        });
+    </script>
+</head>
+<body class="ng-cloak">
+
+<!--[if lte IE 8]>
+<div class="alert alert-warning alert-top">
+    <div class="text-center">
+        It seems you're using an <strong>outdated</strong> browser. Some features may not work as expected.
+        <br/>To get the best experience possible please <a class="alert-link" href="http://browsehappy.com/">upgrade your
+        browser</a>.
+    </div>
+</div>
+<![endif]-->
+
+
+<div class="messages">
+
+    <div class="container">
+        <div messages></div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div ui-view="main"></div>
+
+</div>
+
+</body>
+</html>

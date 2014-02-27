@@ -1,0 +1,18 @@
+<div id="confirmModal">
+    <div class="modal-header">
+        <h3>{{title || 'Changes Will Be Lost - Are You Sure?'}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+
+            <div class="col-xs-2 col-xs-offset-4">
+                <button ng-click="yes()" class="btn btn-success btn-block">Yes</button>
+            </div>
+
+            <div class="col-xs-2">
+                <button ng-click="no()" class="btn btn-default btn-block">No</button>
+            </div>
+
+        </div>
+    </div>
+</div>

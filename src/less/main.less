@@ -1,0 +1,318 @@
+/**
+ * Import Bootstrap & our variables file
+ */
+@import '../../vendor/bootstrap/less/bootstrap.less';
+@import '../../vendor/font-awesome/less/font-awesome.less';
+@import 'variables.less';
+
+/**
+ * Global
+ */
+
+.alert-top {
+  margin-bottom: 0;
+}
+
+.messages {
+  margin-top: 40px;
+  min-height: 65px;
+  overflow: hidden;
+  text-align: center;
+
+  .alert {
+    margin-bottom: 5px;
+  }
+}
+
+.shadow {
+  .box-shadow(1px 1px 3px 1px rgba(0, 0, 0, 0.3));
+}
+
+a {
+  cursor: pointer;
+}
+
+hr {
+  background-color: #dddddd;
+  height: 0.5px;
+}
+
+ul.nav-tabs > li.active {
+  z-index: -1 !important;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Client Card
+ */
+.content-card {
+  background-color: @content-card-primary-color;
+  border: 1px solid lighten(@content-card-secondary-color, 15%);
+  padding: 8px;
+  margin: 10px 0;
+  height: 150px;
+  overflow: hidden;
+  background-clip: padding-box;
+
+  // fix vertical position of add new buttons
+  @media only screen
+  and (max-width: @screen-md-max)
+  and (min-width: @screen-md-min) {
+    button {
+      margin-top: -14%;
+    }
+  }
+  @media only screen
+  and (max-width: @screen-md-min) {
+    button {
+      margin-top: -7%;
+    }
+  }
+  @media only screen
+  and (max-width: @screen-sm-min) {
+    button {
+      margin-top: -33%;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    color: #2F3440;
+    font-size: 27px;
+  }
+
+  p {
+    color: #476173;
+  }
+
+  .project-panel {
+    border: 1px solid lighten(@content-card-secondary-color, 5%);
+    margin-top: 10px;
+    margin-left: -9px;
+    margin-bottom: 0;
+
+    background-color: lighten(@content-card-secondary-color, 35%);
+    text-align: center;
+
+    a, button {
+      color: lighten(@grey, 5%);
+      font-size: 16px;
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 11px 0;
+    }
+
+    a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    .panel-item {
+      border-right: 1px solid lighten(@content-card-secondary-color, 5%);
+      padding: 0;
+    }
+  }
+
+  .panel {
+    border: 1px solid lighten(@content-card-secondary-color, 5%);
+    margin-top: 96px;
+    margin-left: -9px;
+    margin-bottom: 0;
+    height: 50px;
+    background-color: lighten(@content-card-secondary-color, 35%);
+    text-align: center;
+
+    a, button {
+      color: lighten(@grey, 5%);
+      font-size: 16px;
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 11px 0;
+    }
+
+    a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    .panel-item {
+      border-right: 1px solid lighten(@content-card-secondary-color, 5%);
+      padding: 0;
+    }
+  }
+
+  .inner-content {
+    height: 65%;
+  }
+
+  .list-inline {
+    margin-left: 15px;
+  }
+
+  .nav-panel {
+    margin-top: 5px;
+  }
+}
+
+.content-card-new {
+  border: 1px dashed @content-card-secondary-color;
+
+  button {
+    color: @content-card-secondary-color - #111;
+    font-size: 16px;
+  }
+
+  button:hover {
+    color: black;
+  }
+
+  .inner-content {
+    margin-top: 17% !important;
+  }
+}
+
+/**
+ * Forms
+ */
+
+.form-like {
+  background-color: white;
+  border: 1px solid @content-card-secondary-color;
+  padding: 20px;
+  margin-top: -2px;
+  margin-bottom: 20px;
+}
+
+form {
+  .form-like;
+
+  .shadow;
+  input[type=text], input[type=password] {
+    border-left-width: 8px;
+  }
+
+  &[name=questionsForm] {
+    div.form-group {
+      margin-left: 10px;
+    }
+  }
+
+  &[novalidate] {
+    margin-top: -2px;
+
+    > div > div > div {
+      margin-top: 15px;
+    }
+  }
+
+  input {
+
+    &.ng-dirty {
+
+      &.ng-valid {
+        border-color: @brand-success;
+      }
+
+      &.ng-invalid {
+        border-color: @brand-danger;
+      }
+    }
+  }
+
+  .has-error {
+    color: @brand-danger !important;
+  }
+
+  .has-error * {
+    .has-error;
+  }
+}
+
+.question-editor-container {
+  height: 165px;
+}
+
+/**
+ * Tables
+ */
+.table {
+
+  thead {
+    tr th {
+      text-align: center;
+    }
+  }
+
+  &.table-form {
+    td {
+      text-align: center;
+
+      span, a {
+        line-height: 30px;
+      }
+
+      &.link {
+        min-width: 50px;
+        padding: 0;
+
+        span, a {
+          padding: 10px 15px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.reporting {
+  hr {
+    margin-top: -4px;
+    margin-bottom: 3px;
+  }
+}
+
+audio {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.call-analysis-overlay {
+  z-index: 999;
+  position: fixed;
+  margin-top: -65px;
+  width: @container-sm - 20px;
+
+  @media only screen and (min-width: @screen-lg-min) {
+    width: @container-lg - 20px;
+  }
+
+  @media only screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    width: @container-md - 20px;
+  }
+}
+
+.table-condensed {
+
+  margin-bottom: 0;
+
+  .table {
+    background-color: #fff;
+  }
+
+  tr td {
+    border-top: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@import 'animations.less';
+@import 'navigation.less';
+@import '../../vendor/system.auth/src/auth.less';

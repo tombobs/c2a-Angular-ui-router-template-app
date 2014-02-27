@@ -1,0 +1,23 @@
+<div id="reloadModal">
+    <div class="modal-header">
+        <h3>Something Went Wrong</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                An unexpected error has occured. Please refresh your browser.
+            </div>
+        </div>
+        <div ng-show="appDebugEnabled" class="row" style="margin-top: 10px;">
+            <div class="col-xs-12"><h4>Debug Message:</h4></div>
+            <div class="col-xs-12">{{debugMessage}}</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <button ng-click="reload()" class="btn btn-primary btn-block">Refresh</button>
+            </div>
+        </div>
+    </div>
+</div>
