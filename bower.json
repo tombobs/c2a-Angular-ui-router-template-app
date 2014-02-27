@@ -1,0 +1,20 @@
+{
+  "name": "ScanUI",
+  "version": "0.4.0",
+  "devDependencies": {
+    "angular": "1.2.8",
+    "angular-bootstrap": "~0.9.0",
+    "angular-cookies": "1.2.8",
+    "angular-mocks": "1.2.8",
+    "angular-sanitize": "1.2.8",
+    "angular-scenario": "1.2.8",
+    "angular-ui-router": "0.2.7",
+    "bootstrap": "~3.0.0",
+    "es5-shim": "~2.1.0",
+    "font-awesome": "~4.0.3",
+    "json3": "~3.2.5",
+    "respond": "~1.4.0",
+    "system.auth": "git@bitbucket.org:calls2account/system.auth.git",
+    "system.messages": "git@bitbucket.org:calls2account/system.messages.git"
+  }
+}
